@@ -1,7 +1,7 @@
 # claude-code-skills
 
 <p align="center">
-  <img width="726" height="188" alt="banner" src="https://github.com/user-attachments/assets/b60517f5-98ab-4474-aca4-2ba7170e6374" />
+  <img width="741" height="179" alt="Claude Code Skills - Banner" src="https://github.com/user-attachments/assets/ddf470f5-ac94-4f13-89a3-9417531e7a9c" />
 </p>
 <p align="center">
   <a href="#">
