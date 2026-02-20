@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License MIT" />
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/skills-13-green?style=flat-square" alt="Skills: 13" />
+    <img src="https://img.shields.io/badge/skills-16-green?style=flat-square" alt="Skills: 16" />
   </a>
   <a href="#">
     <img src="https://img.shields.io/badge/agents-3-orange?style=flat-square" alt="Agents: 3" />
@@ -60,6 +60,9 @@ Claude Code is powerful out of the box, but it doesn't know your stack conventio
 | [db-seed-generator](skills/db-seed-generator) | Generate realistic seed data from a Prisma schema with correct relation ordering |
 | [api-docs-generator](skills/api-docs-generator) | Generate OpenAPI 3.1 specs from existing Next.js API routes |
 | [error-boundary-generator](skills/error-boundary-generator) | Scan a React app and generate error boundaries with typed fallback UIs where they're missing |
+| [auth-scaffold](skills/auth-scaffold) | Scaffold Auth.js (NextAuth v5) authentication with providers, session handling, middleware protection, and RBAC |
+| [ai-integration-generator](skills/ai-integration-generator) | Generate AI-powered features with Vercel AI SDK — streaming chat, useChat/useCompletion hooks, structured output, and RAG |
+| [nextjs-middleware-generator](skills/nextjs-middleware-generator) | Generate Next.js middleware for auth, CORS, rate limiting, redirects, i18n, and composable middleware chains |
 
 ## Agents
 
