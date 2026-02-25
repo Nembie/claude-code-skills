@@ -15,11 +15,62 @@
   </a>
   <a href="#">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
-  </a>    
+  </a>
+  <a href="https://skills.sh/nembie/claude-code-skills">
+    <img src="https://img.shields.io/badge/skills.sh-compatible-blue?logo=claude&style=flat-square" alt="skills.sh" />
+  </a>
 </p>
 <p align="center">
   Production-grade skills and intelligent agents for Claude Code. Built for modern full-stack development.
 </p>
+
+## Quick Start
+
+Install all skills with [skills.sh](https://skills.sh):
+
+```bash
+npx skills add Nembie/claude-code-skills
+```
+
+Or install a single skill:
+
+```bash
+npx skills add Nembie/claude-code-skills --skill prisma-query-optimizer
+```
+
+### Manual installation
+
+Copy a skill to your Claude Code skills directory:
+
+```bash
+cp -r skills/prisma-query-optimizer ~/.claude/skills/
+```
+
+Or symlink from the cloned repo:
+
+```bash
+git clone https://github.com/Nembie/claude-code-skills.git
+ln -s $(pwd)/claude-code-skills/skills/prisma-query-optimizer ~/.claude/skills/
+```
+
+Skills are automatically available once placed in `~/.claude/skills/`.
+
+## Configuration
+
+Edit `config/defaults.md` to match your stack. Every skill reads this file and adapts its output accordingly.
+
+```
+orm: Prisma                    # or Drizzle, TypeORM, Kysely
+api: Next.js App Router        # or tRPC, Express
+testing: Vitest                # or Jest
+validation: Zod                # or Valibot, ArkType
+styling: Tailwind CSS          # or CSS Modules, styled-components
+components: none               # or shadcn/ui, Radix, MUI
+package-manager: pnpm          # or npm, yarn, bun
+database: PostgreSQL           # or MySQL, SQLite
+```
+
+Change a value and all skills automatically adjust their generated code, imports, and patterns.
 
 ## The Problem
 
@@ -73,40 +124,6 @@ Agents orchestrate multiple skills with branching logic — they stop on critica
 | [full-stack-reviewer](agents/full-stack-reviewer) | Runs code review first; if critical security issues are found, stops and reports them immediately instead of continuing. Otherwise runs Prisma + TypeScript analysis and produces a deduplicated report. |
 | [feature-scaffolder](agents/feature-scaffolder) | Generates shared types first as a single source of truth, then creates Zod schemas, API routes, and React components that all import from the same types. Verifies cross-file imports before delivering. |
 | [bug-fixer](agents/bug-fixer) | Iteratively investigates bugs — widens search if root cause is unclear, asks for confirmation before fixing, generates and runs regression tests, reports confidence level. |
-
-## Quick Start
-
-Copy a skill to your Claude Code skills directory:
-
-```bash
-cp -r skills/prisma-query-optimizer ~/.claude/skills/
-```
-
-Or symlink from the cloned repo:
-
-```bash
-git clone https://github.com/yourorg/claude-code-skills.git
-ln -s $(pwd)/claude-code-skills/skills/prisma-query-optimizer ~/.claude/skills/
-```
-
-Skills are automatically available once placed in `~/.claude/skills/`.
-
-## Configuration
-
-Edit `config/defaults.md` to match your stack. Every skill reads this file and adapts its output accordingly.
-
-```
-orm: Prisma                    # or Drizzle, TypeORM, Kysely
-api: Next.js App Router        # or tRPC, Express
-testing: Vitest                # or Jest
-validation: Zod                # or Valibot, ArkType
-styling: Tailwind CSS          # or CSS Modules, styled-components
-components: none               # or shadcn/ui, Radix, MUI
-package-manager: pnpm          # or npm, yarn, bun
-database: PostgreSQL           # or MySQL, SQLite
-```
-
-Change a value and all skills automatically adjust their generated code, imports, and patterns.
 
 ## Try It
 
